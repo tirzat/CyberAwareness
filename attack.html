@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Interactive Cyber Safety Learning Centre">
+    <meta name="theme-color" content="#071526">
+    <title>Cyber Awareness | Security Learning Centre</title>
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            margin: 0;
+            background: #071526;
+            color: #edf6ff;
+            font-family: Arial, sans-serif;
+            line-height: 1.7;
+        }
+
+        .header {
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 15px;
+            padding: 16px 5%;
+            background: #091c30;
+            border-bottom: 1px solid #29445f;
+        }
+
+        .logo {
+            color: #32d6c5;
+            font-weight: bold;
+            text-decoration: none;
+            font-size: 20px;
+        }
+
+        .presentation-controls {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+
+        button, .btn {
+            cursor: pointer;
+            border: 1px solid #29445f;
+            border-radius: 9px;
+            padding: 10px 15px;
+            background: #142d47;
+            color: #edf6ff;
+            text-decoration: none;
+        }
+
+        button:hover, .btn:hover {
+            border-color: #32d6c5;
+            color: #32d6c5;
+        }
+
+        main {
+            max-width: 1100px;
+            margin: auto;
+            padding: 35px 22px;
+        }
+
+        .hero-content {
+            padding: 50px 25px;
+            border: 1px solid #29445f;
+            border-radius: 20px;
+            background: linear-gradient(130deg, #102b46, #123d50);
+            text-align: center;
+        }
+
+        .section-tag {
+            color: #32d6c5;
+            letter-spacing: 3px;
+            font-size: 13px;
+            font-weight: bold;
+        }
+
+        .hero-content h1 {
+            font-size: clamp(30px, 5vw, 48px);
+        }
+
+        .hero-content p {
+            color: #a9bdd1;
+        }
+
+        .content-section {
+            margin: 25px 0;
+            padding: 28px;
+            border: 1px solid #29445f;
+            border-radius: 16px;
+            background: #10243b;
+            scroll-margin-top: 100px;
+        }
+
+        .content-section h2 {
+            color: #32d6c5;
+            margin-top: 0;
+        }
+
+        .content-section h3 {
+            color: #d8f8f4;
+        }
+
+        .content-section p,
+        .content-section li {
+            color: #c1d1e0;
+        }
+
+        .learning-navigation {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .learning-navigation a {
+            text-decoration: none;
+            color: #32d6c5;
+            border: 1px solid #29445f;
+            padding: 9px 14px;
+            border-radius: 30px;
+        }
+
+        .learning-navigation a:hover {
+            background: #142d47;
+        }
+
+        .real-life-example,
+        .scenario-box,
+        .visual-learning,
+        .safety-reminder,
+        .emergency-box {
+            background: #142d47;
+            padding: 20px;
+            margin-top: 18px;
+            border-radius: 12px;
+            border: 1px solid #29445f;
+        }
+
+        .attack-visual {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+            gap: 15px;
+        }
+
+        .attack-visual > * {
+            background: #0a1b2e;
+            padding: 18px;
+            border: 1px solid #29445f;
+            border-radius: 12px;
+        }
+
+        #dynamicScenario button,
+        #dynamicDetective button,
+        #challengeOptions button {
+            margin: 7px 5px 7px 0;
+            padding: 12px 16px;
+        }
+
+        #challengeOptions {
+            display: grid;
+            gap: 10px;
+        }
+
+        #challengeOptions button {
+            text-align: left;
+            width: 100%;
+        }
+
+        #challengeFeedback {
+            font-weight: bold;
+            color: #32d6c5;
+        }
+
+        .content-section a:not(.btn) {
+            color: #32d6c5;
+        }
+
+        .footer {
+            text-align: center;
+            padding: 30px;
+            color: #a9bdd1;
+            background: #091c30;
+            border-top: 1px solid #29445f;
+        }
+
+        @media (max-width: 650px) {
+            .header {
+                position: sticky;
+            }
+
+            .presentation-controls {
+                width: 100%;
+            }
+
+            .content-section {
+                padding: 19px;
+            }
+
+            .hero-content {
+                padding: 35px 18px;
+            }
+        }
+
+        @media print {
+            body {
+                background: white;
+                color: black;
+            }
+
+            .header,
+            .presentation-controls,
+            .learning-navigation,
+            .footer {
+                display: none !important;
+            }
+
+            .content-section,
+            .hero-content {
+                background: white;
+                color: black;
+                border: 1px solid #ccc;
+                break-inside: avoid;
+            }
+
+            p, li {
+                color: black !important;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<header class="header">
+    <a href="index.html" class="logo">🛡️ CYBER AWARENESS</a>
+
+    <div class="presentation-controls">
+        <button id="presenterBtn">🎤 Start Presenter Mode</button>
+        <button onclick="window.print()">🖨️ Print Guide</button>
+        <a href="index.html" class="btn">← Home</a>
+    </div>
+</header>
+
+<main class="section attack-detail">
+
+    <section class="hero-content">
+        <p class="section-tag">CYBER SAFETY LEARNING CENTRE</p>
+        <h1 id="attackTitle">Understanding Cyber Attacks</h1>
+        <p id="attackIntro">Learn how cyberattacks happen and how to protect yourself.</p>
+    </section>
+
+    <section class="content-section">
+        <h2>📚 Your Learning Journey</h2>
+        <nav class="learning-navigation">
+            <a href="#whatSection">01 Understand</a>
+            <a href="#howSection">02 Discover</a>
+            <a href="#incidentSection">03 Investigate</a>
+            <a href="#preventionSection">04 Protect</a>
+            <a href="#challengeSection">05 Test Yourself</a>
+        </nav>
+    </section>
+
+    <section class="content-section" id="whatSection">
+        <h2>01 / 💡 Understand the Attack</h2>
+        <p id="what"></p>
+
+        <div class="real-life-example">
+            <p id="example"></p>
+        </div>
+
+        <div class="scenario-box" id="dynamicScenario"></div>
+    </section>
+
+    <section class="content-section" id="howSection">
+        <h2>02 / 🔍 Discover How It Happens</h2>
+        <p>Explore the stages of this cyberattack.</p>
+        <div id="how" class="attack-steps"></div>
+
+        <div class="visual-learning">
+            <h3>🖼️ Visual Attack Breakdown</h3>
+            <div id="attackVisual" class="attack-visual"></div>
+        </div>
+    </section>
+
+    <section class="content-section" id="incidentSection">
+        <h2>03 / 📰 Real Incidents and Evidence</h2>
+        <p>Explore documented incidents and official security advisories.</p>
+        <div id="incidents"></div>
+    </section>
+
+    <section class="content-section">
+        <h2>04 / 🕵️ Know the Attackers</h2>
+        <p id="attackers"></p>
+    </section>
+
+    <section class="content-section">
+        <h2>05 / 👥 Identify the Victims</h2>
+        <p id="victims"></p>
+    </section>
+
+    <section class="content-section">
+        <h2>06 / ⚡ Understand the Effects</h2>
+        <ul id="effects"></ul>
+    </section>
+
+    <section class="content-section" id="preventionSection">
+        <h2>07 / 🛡️ Protect Yourself</h2>
+        <ul id="prevention"></ul>
+
+        <div class="safety-reminder">
+            <h3>Remember!</h3>
+            <p>Stop. Think. Verify. Then act.</p>
+        </div>
+    </section>
+
+    <section class="content-section">
+        <h2>08 / 🚨 Respond to an Attack</h2>
+        <ol id="response"></ol>
+
+        <div class="emergency-box">
+            <h3>🇮🇳 Need Immediate Help?</h3>
+            <p><strong>1930 – National Cybercrime Helpline</strong></p>
+            <p>Report cybercrime through the official Government of India portal.</p>
+            <a href="https://cybercrime.gov.in/"
+               target="_blank"
+               rel="noopener noreferrer">
+                Report Cybercrime →
+            </a>
+        </div>
+    </section>
+
+    <section class="content-section">
+        <h2>09 / ⚖️ Indian Cyber Laws</h2>
+        <p id="laws"></p>
+        <p>Legal provisions depend on the facts of each case. This section is educational, not legal advice.</p>
+    </section>
+
+    <section class="content-section">
+        <h2>10 / 🏛️ Government Resources</h2>
+        <ul>
+            <li>
+                <a href="https://cybercrime.gov.in/" target="_blank" rel="noopener noreferrer">
+                    National Cyber Crime Reporting Portal
+                </a>
+            </li>
+            <li>
+                <a href="https://www.cert-in.org.in/" target="_blank" rel="noopener noreferrer">
+                    CERT-In
+                </a>
+            </li>
+            <li>
+                <a href="https://www.cyberswachhtakendra.gov.in/" target="_blank" rel="noopener noreferrer">
+                    Cyber Swachhta Kendra
+                </a>
+            </li>
+        </ul>
+    </section>
+
+    <section class="content-section" id="detectiveSection">
+        <h2>11 / 🕵️ Cyber Detective Challenge</h2>
+        <p>Investigate the clues and identify the warning signs.</p>
+        <div id="dynamicDetective"></div>
+    </section>
+
+    <section class="content-section" id="challengeSection">
+        <h2>12 / 🧠 Test Your Knowledge</h2>
+        <p id="challenge"></p>
+        <div id="challengeOptions"></div>
+        <p id="challengeFeedback" aria-live="polite"></p>
+    </section>
+
+   <section class="content-section" id="completionSection" hidden>
+    <h2>🎉 Learning Completed!</h2>
+    <p>Congratulations! You have completed this cyber safety lesson.</p>
+    <a href="index.html" class="btn">← Explore More Cyber Attacks</a>
+</section>
+
+</main>
+
+<footer class="footer">
+    <p>🛡️ CYBER AWARENESS</p>
+    <p>Understand. Identify. Prevent. Report.</p>
+    <p>Stay Alert. Stay Safe. Stay Cyber Smart.</p>
+</footer>
+
+<script src="attack-details.js"></script>
+
+</body>
+</html>

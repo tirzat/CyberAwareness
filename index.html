@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Cyber Awareness | Understand. Identify. Prevent.</title>
+
+    <meta name="description" content="Learn about cyberattacks, real cybercrime incidents, online safety, prevention and cyber laws through simple explanations.">
+    <meta name="keywords" content="Cyber Awareness, Cyber Security, Cyber Crime, Phishing, Online Safety">
+
+    <meta name="theme-color" content="#071426">
+
+    <link rel="icon" href="favicon.ico">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <header class="header">
+        <button id="menuBtn" class="menu-btn" aria-label="Open navigation">☰</button>
+
+        <a href="#" class="logo">
+            <span class="logo-icon">🛡️</span>
+            <span>CYBER <strong>AWARENESS</strong></span>
+        </a>
+
+        <a href="#emergency" class="emergency-btn">🚨 Emergency Help</a>
+    </header>
+
+    <!-- SIDEBAR -->
+    <aside id="sidebar" class="sidebar">
+        <button id="closeBtn" class="close-btn" aria-label="Close navigation">✕</button>
+
+        <h2>Explore</h2>
+
+        <a href="#home">🏠 Home</a>
+        <a href="#attacks">⚠️ Cyber Attacks</a>
+        <a href="#incidents">📰 Real-Life Incidents</a>
+        <a href="#safety">🛡️ Safety & Prevention</a>
+        <a href="#emergency">🚨 Emergency Help</a>
+        <a href="#laws">⚖️ Indian Cyber Laws</a>
+        <a href="#government">🏛️ Government Help</a>
+        <a href="#quiz">🎯 Quiz & Challenges</a>
+        <a href="#about">ℹ️ About Us</a>
+    </aside>
+
+    <div id="overlay" class="overlay"></div>
+
+    <!-- HOME -->
+    <main>
+
+        <section id="home" class="hero">
+
+            <div class="hero-content">
+                <span class="badge">YOUR DIGITAL SAFETY STARTS HERE</span>
+
+                <h1>
+                    Stay Aware.<br>
+                    <span>Stay Cyber Safe.</span>
+                </h1>
+
+                <p>
+                    The internet connects the world, but it also brings risks.
+                    Learn about cyberattacks through simple explanations,
+                    real-life stories and practical safety lessons.
+                </p>
+
+                <div class="hero-buttons">
+                    <a href="#attacks" class="primary-btn">Explore Cyber Attacks →</a>
+                    <a href="#safety" class="secondary-btn">Learn Safety</a>
+                </div>
+            </div>
+
+            <div class="hero-visual">
+                <div class="shield">🛡️</div>
+                <h3>Think Before You Click!</h3>
+                <p>Understand • Identify • Prevent • Report</p>
+            </div>
+
+        </section>
+
+        <!-- OUR PURPOSE -->
+        <section class="intro section">
+            <span class="section-label">OUR MISSION</span>
+            <h2>Cyber Safety Is For Everyone</h2>
+
+            <p>
+                You don't need to be a computer expert to stay safe online.
+                This website explains cybercrime in simple language so that
+                children, students, parents, senior citizens and beginners
+                can understand and protect themselves.
+            </p>
+
+            <div class="audience-grid">
+                <div>👧<h3>Children</h3><p>Learn safe internet habits.</p></div>
+                <div>🎓<h3>Students</h3><p>Understand cyber threats.</p></div>
+                <div>👨‍👩‍👧<h3>Parents</h3><p>Protect your family online.</p></div>
+                <div>👴<h3>Everyone</h3><p>Stay informed and protected.</p></div>
+            </div>
+        </section>
+
+        <!-- ATTACKS -->
+        <section id="attacks" class="section">
+            <span class="section-label">LEARN AND IDENTIFY</span>
+            <h2>Explore Cyber Attacks</h2>
+            <p class="section-description">
+                Select an attack to understand how it happens,
+                who is affected and how to stay safe.
+            </p>
+
+            <div class="search-box">
+                <input type="text" id="attackSearch"
+                    placeholder="Search an attack... e.g. Phishing, UPI Fraud">
+            </div>
+
+            <div id="attackGrid" class="attack-grid">
+
+                <a class="attack-card" href="attacks/phishing.html" data-name="phishing">
+                    <span>🎣</span>
+                    <h3>Phishing Attack</h3>
+                    <p>Fake messages and websites designed to steal information.</p>
+                    <strong>Explore Attack →</strong>
+                </a>
+
+                <a class="attack-card" href="attacks/smishing.html" data-name="smishing">
+                    <span>📱</span>
+                    <h3>Smishing Attack</h3>
+                    <p>Fraudulent SMS messages that trick people into sharing information.</p>
+                    <strong>Explore Attack →</strong>
+                </a>
+
+                <a class="attack-card" href="attacks/vishing.html" data-name="vishing">
+                    <span>📞</span>
+                    <h3>Vishing Attack</h3>
+                    <p>Fraudulent phone calls pretending to be from trusted organisations.</p>
+                    <strong>Explore Attack →</strong>
+                </a>
+
+                <a class="attack-card" href="attacks/upi-fraud.html" data-name="upi fraud">
+                    <span>💳</span>
+                    <h3>UPI Fraud</h3>
+                    <p>Scams involving digital payments and payment applications.</p>
+                    <strong>Explore Attack →</strong>
+                </a>
+
+                <a class="attack-card" href="attacks/identity-theft.html" data-name="identity theft">
+                    <span>🪪</span>
+                    <h3>Identity Theft</h3>
+                    <p>Misusing another person's personal information.</p>
+                    <strong>Explore Attack →</strong>
+                </a>
+
+                <a class="attack-card" href="attacks/ransomware.html" data-name="ransomware">
+                    <span>🔒</span>
+                    <h3>Ransomware</h3>
+                    <p>Malicious software that locks or encrypts files.</p>
+                    <strong>Explore Attack →</strong>
+                </a>
+
+                <a class="attack-card" href="attacks/malware.html" data-name="malware virus trojan spyware">
+                    <span>🦠</span>
+                    <h3>Malware Attacks</h3>
+                    <p>Harmful software that can damage or steal data.</p>
+                    <strong>Explore Attack →</strong>
+                </a>
+
+                <a class="attack-card" href="attacks/cyberbullying.html" data-name="cyberbullying">
+                    <span>💬</span>
+                    <h3>Cyberbullying</h3>
+                    <p>Harassment or bullying through digital platforms.</p>
+                    <strong>Explore Attack →</strong>
+                </a>
+
+                <a class="attack-card" href="attacks/fake-profile.html" data-name="fake profile impersonation">
+                    <span>🎭</span>
+                    <h3>Fake Profiles</h3>
+                    <p>Creating false online identities to deceive others.</p>
+                    <strong>Explore Attack →</strong>
+                </a>
+
+                <a class="attack-card" href="attacks/ddos.html" data-name="ddos attack">
+                    <span>🌐</span>
+                    <h3>DDoS Attack</h3>
+                    <p>Overloading an online service with excessive traffic.</p>
+                    <strong>Explore Attack →</strong>
+                </a>
+
+                <a class="attack-card" href="attacks/sim-swap.html" data-name="sim swapping">
+                    <span>📲</span>
+                    <h3>SIM Swapping</h3>
+                    <p>Taking control of another person's mobile number.</p>
+                    <strong>Explore Attack →</strong>
+                </a>
+
+                <a class="attack-card" href="attacks/deepfake.html" data-name="deepfake ai voice cloning">
+                    <span>🤖</span>
+                    <h3>Deepfake Scams</h3>
+                    <p>Using manipulated audio or video to deceive people.</p>
+                    <strong>Explore Attack →</strong>
+                </a>
+
+            </div>
+            <p id="noResults" hidden>No matching attacks found.</p>
+        </section>
+
+        <!-- REAL INCIDENTS -->
+        <section id="incidents" class="section alternate">
+            <span class="section-label">LEARN FROM REAL EVENTS</span>
+            <h2>Real-Life Cybercrime Incidents</h2>
+            <p>
+                Discover documented cybercrime incidents, their impact,
+                reliable evidence and the lessons we can learn.
+            </p>
+            <div class="coming-card">
+                📰
+                <h3>Real incidents and verified reports</h3>
+                <p>Incident reports will be organised by attack type with their original sources.</p>
+            </div>
+        </section>
+
+        <!-- SAFETY -->
+        <section id="safety" class="section">
+            <span class="section-label">PROTECT YOURSELF</span>
+            <h2>Cyber Safety & Prevention</h2>
+
+            <div class="tip-grid">
+                <div>🔑<h3>Protect Passwords</h3><p>Use strong, unique passwords.</p></div>
+                <div>🔐<h3>Enable 2FA</h3><p>Add another layer of account protection.</p></div>
+                <div>🔗<h3>Check Links</h3><p>Think before opening unknown links.</p></div>
+                <div>📱<h3>Update Devices</h3><p>Keep your applications and devices updated.</p></div>
+            </div>
+        </section>
+
+        <!-- EMERGENCY -->
+        <section id="emergency" class="section emergency-section">
+            <span class="section-label">NEED HELP?</span>
+            <h2>Have You Become a Cybercrime Victim?</h2>
+            <p>Act quickly. Preserve evidence and contact the appropriate authorities.</p>
+
+            <div class="emergency-number">1930</div>
+            <h3>National Cyber Financial Fraud Helpline (India)</h3>
+
+            <a href="https://cybercrime.gov.in/" target="_blank" rel="noopener">
+                Report Cybercrime on the Official Portal →
+            </a>
+        </section>
+
+        <!-- LAWS -->
+        <section id="laws" class="section">
+            <span class="section-label">KNOW YOUR RIGHTS</span>
+            <h2>Indian Cyber Laws</h2>
+            <p>
+                Learn about Indian laws related to cybercrime, digital safety,
+                privacy and online offences.
+            </p>
+        </section>
+
+        <!-- GOVERNMENT -->
+        <section id="government" class="section alternate">
+            <span class="section-label">OFFICIAL RESOURCES</span>
+            <h2>Government Help & Applications</h2>
+
+            <div class="resource-grid">
+                <a href="https://cybercrime.gov.in/" target="_blank" rel="noopener">
+                    National Cyber Crime Portal →
+                </a>
+                <a href="https://www.cert-in.org.in/" target="_blank" rel="noopener">
+                    CERT-In →
+                </a>
+                <a href="https://www.csk.gov.in/" target="_blank" rel="noopener">
+                    Cyber Swachhta Kendra →
+                </a>
+            </div>
+        </section>
+
+        <!-- QUIZ -->
+        <section id="quiz" class="section">
+            <span class="section-label">TEST YOUR KNOWLEDGE</span>
+            <h2>Cyber Safety Quiz & Challenges</h2>
+            <p>Learn through interactive challenges, starting from easy to difficult.</p>
+            <button class="primary-btn" id="startQuizBtn">Start Learning Challenge →</button>
+            <div id="quizContainer"></div>
+        </section>
+
+        <!-- ABOUT -->
+        <section id="about" class="section about">
+            <h2>About Cyber Awareness</h2>
+            <p>
+                Our mission is to make cyber safety understandable and accessible
+                to everyone, regardless of age, education or technical knowledge.
+            </p>
+            <h3>Understand. Identify. Prevent. Report.</h3>
+        </section>
+
+    </main>
+
+    <footer>
+        <h3>🛡️ CYBER AWARENESS</h3>
+        <p>Making the digital world safer for everyone.</p>
+        <p>Educational awareness project. Verify official information before taking action.</p>
+        <small>© 2026 Cyber Awareness</small>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
