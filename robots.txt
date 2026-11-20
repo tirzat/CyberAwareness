@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://cyberawareness-f27x.onrender.com/sitemap.xml
